@@ -8,7 +8,7 @@ const Home = () => {
   const text = (
     <p className="text-gray-600 leading-relaxed text-lg max-w-2xl">
       web developer delivering fast, scaleable, and user-friendly websites and
-      web applications that help you convert.
+      web applications that help grow your business.
     </p>
   );
 
