@@ -7,9 +7,8 @@ const Home = () => {
   // set up hero text
   const text = (
     <p className="text-gray-600 leading-relaxed text-lg max-w-2xl">
-      web developer interested in the jamstack, and delivering blazing-fast
-      websites and web applications using modern web technologies and
-      architecture.
+      web developer delivering fast, scaleable, and user-friendly websites and
+      web applications that help you convert
     </p>
   );
 
