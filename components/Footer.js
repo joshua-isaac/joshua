@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
 const Footer = () => {
   // set current time
