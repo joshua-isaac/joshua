@@ -2,7 +2,6 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header className="bg-white bg-opacity-60 sticky-nav">
-      {renderThemeChanger()}
       <div className="container flex justify-between p-4 text-sm md:text-base text-gray-900">
         <div>
           <Link href="/">
