@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
   // set current time
@@ -17,6 +19,27 @@ const Footer = () => {
       tick();
     }, 1000);
   }, []);
+
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // change theme
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return <button onClick={() => setTheme("light")}>lights on</button>;
+    } else {
+      return <button onClick={() => setTheme("dark")}>lights out</button>;
+    }
+  };
 
   return (
     <footer className="p-4 container grid grid-cols-3 text-sm md:text-base text-gray-900 mt-10">
@@ -77,7 +100,7 @@ const Footer = () => {
             <a>guestbook</a>
           </Link>
         </li>
-        <li>uses</li>
+        <li>{renderThemeChanger()}</li>
       </ul>
     </footer>
   );
