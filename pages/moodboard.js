@@ -32,7 +32,7 @@ const Moodboard = () => {
         {data?.images.map((image) => (
           <div className="relative" key={image.id}>
             <a
-              href={`https://www.archillect.com/${image.id}`}
+              href={`https://archillect.com/${image.id}`}
               target="_blank"
               rel="noreferrer noopener"
               title={`#${image.id}`}
