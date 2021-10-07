@@ -29,13 +29,14 @@ const FeaturedWork = () => {
             href="https://www.stevemomusic.com"
             title="steve mo music"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             <Image
               src="/steve_mo_music.jpeg"
               objectFit="cover"
               width="800"
               height="1000"
+              alt="steve mo music"
             />
             <div className="flex justify-between items-center bg-gray-100 p-2 relative -mt-2 text-gray-900">
               <p className="text-sm font-medium">steve mo music</p>
@@ -46,7 +47,13 @@ const FeaturedWork = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/cat.jpg" width="800" height="1000" />
+          <Image
+            src="/cat.jpg"
+            width="800"
+            height="1000"
+            alt="flow with victoria"
+            objectFit="cover"
+          />
           <div className="flex justify-between items-center bg-gray-100 p-2 relative -mt-2 text-gray-900">
             <p className="text-sm font-medium">flow with victoria</p>
             <p>
@@ -55,7 +62,13 @@ const FeaturedWork = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/cat.jpg" width="800" height="1000" />
+          <Image
+            src="/cat.jpg"
+            width="800"
+            height="1000"
+            alt="libero world"
+            objectFit="cover"
+          />
           <div className="flex justify-between items-center bg-gray-100 p-2 relative -mt-2 text-gray-900">
             <p className="text-sm font-medium">libero world</p>
             <p>
@@ -64,7 +77,13 @@ const FeaturedWork = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/cat.jpg" width="800" height="1000" />
+          <Image
+            src="/cat.jpg"
+            width="800"
+            height="1000"
+            alt="freshouse"
+            objectFit="cover"
+          />
           <div className="flex justify-between items-center bg-gray-100 p-2 relative -mt-2 text-gray-900">
             <p className="text-sm font-medium">freshouse</p>
             <p>

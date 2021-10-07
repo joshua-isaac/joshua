@@ -39,17 +39,29 @@ const Footer = () => {
       </ul>
       <ul>
         <li>
-          <a href="https://www.github.com" target="_blank" rel="noopener">
+          <a
+            href="https://www.github.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             github
           </a>
         </li>
         <li>
-          <a href="https:/www.twitter.com" target="_blank" rel="noopener">
+          <a
+            href="https:/www.twitter.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             twitter
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             instagram
           </a>
         </li>

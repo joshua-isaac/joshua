@@ -14,8 +14,8 @@ const Work = ({ results }) => {
   // set up hero text
   const text = (
     <p className="text-gray-600 leading-relaxed text-lg">
-      browse through the websites and web applications i've been lucky enough to
-      develop for some of previous clients, or view{" "}
+      browse through the websites and web applications i have been lucky enough
+      to develop for some of previous clients, or view{" "}
       <Link href="/services">
         <a className="text-blue">my services</a>
       </Link>
