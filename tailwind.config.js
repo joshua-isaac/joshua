@@ -1,16 +1,16 @@
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "false",
+  darkMode: "class",
   theme: {
     container: {
       center: true,
       screens: {
-        sm: "680px",
-        md: "680px",
-        lg: "680px",
-        xl: "800px",
-        "2xl": "680px",
+        sm: "860px",
+        md: "860px",
+        lg: "860px",
+        xl: "860px",
+        "2xl": "860px",
       },
     },
     fontFamily: {
@@ -27,6 +27,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        transparent: "transparent",
         blue: "#3b82f6",
       },
     },

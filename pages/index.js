@@ -1,24 +1,52 @@
-import Link from "next/link";
-import Hero from "../components/Hero";
-import LatestPosts from "../components/LatestPosts";
-import FeaturedWork from "../components/FeaturedWork";
+import HomeHero from "../components/HomeHero";
+import WorkListing from "../components/WorkListing";
+import { notion } from "../lib/notion";
 
-const Home = () => {
+const Home = ({ workResults }) => {
   // set up hero text
   const text = (
-    <p className="text-gray-600 leading-relaxed text-lg max-w-2xl">
-      web developer delivering fast, scaleable, and user-friendly websites and
-      web applications that help grow your business.
-    </p>
+    <>
+      <p className="hidden md:block text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-2xl">
+        web developer interested in the jamstack and building websites, web
+        applications, and e-commerce solutions with modern technologies and
+        architecture.
+      </p>
+      <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md md:hidden">
+        frontend web developer
+      </p>
+    </>
   );
+
+  // get items from notion
+  const items = workResults?.map((item) => {
+    return {
+      item: item.properties,
+    };
+  });
 
   return (
     <>
-      <Hero title="hello, i'm joshua" text={text} />
-      <FeaturedWork />
-      <LatestPosts />
+      <HomeHero />
+      <WorkListing items={items} />
     </>
   );
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  // databaseId for work items
+  const workDatabaseId = "3f5902143db645f9a88d31a0e4a83f06";
+
+  // get response from notion
+  const response = await notion.databases.query({
+    database_id: workDatabaseId,
+  });
+
+  return {
+    revalidate: 1,
+    props: {
+      workResults: response.results.reverse(),
+    },
+  };
+}

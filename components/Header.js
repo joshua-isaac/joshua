@@ -1,23 +1,57 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { FiSun, FiMoon } from "react-icons/fi";
+
 const Header = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // change theme
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <button
+          onClick={() => setTheme("light")}
+          className="bg-gray-200 p-2 rounded-lg"
+        >
+          <FiSun className="text-black" />
+        </button>
+      );
+    } else {
+      return (
+        <button
+          onClick={() => setTheme("dark")}
+          className="bg-gray-200 p-2 rounded-lg"
+        >
+          <FiMoon className="text-black" />
+        </button>
+      );
+    }
+  };
+
   return (
-    <header className="bg-white bg-opacity-60 sticky-nav">
-      <div className="container flex justify-between p-4 text-sm md:text-base text-gray-900">
-        <div>
-          <Link href="/">
-            <a>joshua</a>
-          </Link>
-        </div>
+    <header className="bg-white bg-opacity-60 sticky-nav dark:bg-black dark:bg-opacity-0">
+      <div className="flex justify-between items-center py-4 text-sm md:text-base text-gray-900 dark:text-white container px-4">
         <nav>
-          <ul className="flex space-x-4 text-sm md:text-base">
+          <ul className="flex space-x-4 text-sm md:text-base items-center">
             <li>
-              <Link href="/work">
+              <Link href="/#work">
                 <a>work</a>
               </Link>
             </li>
             <li>
-              <Link href="/services">
-                <a>services</a>
+              <Link href="/blog">
+                <a>blog</a>
               </Link>
             </li>
             <li>
@@ -26,12 +60,16 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contact">
-                <a>contact</a>
+              <a href="mailto:hello.joshua@hotmail.com">contact</a>
+            </li>
+            <li>
+              <Link href="/">
+                <a>home</a>
               </Link>
             </li>
           </ul>
         </nav>
+        <div>{renderThemeChanger()}</div>
       </div>
     </header>
   );

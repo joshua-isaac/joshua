@@ -1,34 +1,55 @@
 import useSWR from "swr";
 import Image from "next/image";
+import PageHero from "../components/PageHero";
+import { CgSpinnerAlt } from "react-icons/cg";
 
 const Moodboard = () => {
+  // set up hero text
+  const text = (
+    <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-3xl">
+      my moodboard is curated from the help of{" "}
+      <a
+        href="https://archillect.com/about"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue"
+        title="Archillect"
+      >
+        Archillect
+      </a>
+      , an AI created by{" "}
+      <a
+        href="https://twitter.com/muratpak"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue"
+        title="Pak"
+      >
+        Pak
+      </a>{" "}
+      used to discover and share stimulating visual content.
+    </p>
+  );
+
   // set up fetcher method
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   // fetch scraper endpoint with swr
   const { data, error } = useSWR("/api/scraper", fetcher);
 
-  // error
-  if (error || data?.images.length <= 0) {
-    return (
-      <section className="px-4 text-center grid place-items-center h-screen">
-        <p>moodboard broken...</p>
-      </section>
-    );
-  }
-
-  // loading
-  if (!data) {
-    return (
-      <section className="px-4 text-center grid place-items-center h-screen">
-        <p>loading...</p>
-      </section>
-    );
-  }
-
   return (
-    <section className="px-4 my-2">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center">
+    <section className="my-2 container">
+      <PageHero text={text} title="moodboard" />
+      {!data && (
+        <div className="px-4 flex justify-center">
+          <CgSpinnerAlt className="animate-spin text-gray-900 dark:text-white text-2xl" />
+        </div>
+      )}
+      {error ||
+        (data?.images.length <= 0 && (
+          <p className="px-4">moodboard broken :(</p>
+        ))}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center px-4">
         {data?.images.map((image) => (
           <div className="relative" key={image.id}>
             <a
@@ -36,7 +57,6 @@ const Moodboard = () => {
               target="_blank"
               rel="noreferrer noopener"
               title={`#${image.id}`}
-              className="group"
             >
               <Image
                 src={image.url}
@@ -45,11 +65,6 @@ const Moodboard = () => {
                 objectFit="contain"
                 alt="stimulating visual content"
               />
-              <div className="group-hover:bg-white group-hover:bg-opacity-75 absolute inset-0 transition duration-300 ease-in-out">
-                <p className="text-black text-opacity-0 group-hover:text-opacity-100 absolute top-1/2 left-1/2 -translate-x-1/2 text-xs transition duration-300 ease-in-out">
-                  #{image.id}
-                </p>
-              </div>
             </a>
           </div>
         ))}

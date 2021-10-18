@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import Link from "next/link";
-import { useTheme } from "next-themes";
+import { ImSpotify } from "react-icons/im";
 
 const Footer = () => {
   // set current time
@@ -19,88 +19,95 @@ const Footer = () => {
     }, 1000);
   }, []);
 
-  const { systemTheme, theme, setTheme } = useTheme();
-
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // change theme
-  const renderThemeChanger = () => {
-    if (!mounted) return null;
-
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return <button onClick={() => setTheme("light")}>lights on</button>;
-    } else {
-      return <button onClick={() => setTheme("dark")}>lights out</button>;
-    }
-  };
-
   return (
-    <footer className="p-4 container grid grid-cols-3 text-sm md:text-base text-gray-900 mt-10">
-      <ul>
-        <li>
-          <Link href="/">
-            <a>home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            <a>blog</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
-        </li>
-      </ul>
-      <ul>
-        <li>
+    <footer className="text-sm md:text-base text-gray-900 dark:text-white mt-10 container px-4 mb-8">
+      <hr className="w-full border-1 border-gray-200 dark:border-gray-500 mb-8" />
+      <div className="grid grid-cols-3 mb-10">
+        <div className="col-span-1 flex items-center">
+          <ImSpotify style={{ color: "#1ED760" }} />{" "}
+          <p className="ml-2">
+            <span className="font-medium">not playing</span> -{" "}
+            <span className="text-gray-600">spotify</span>
+          </p>
+        </div>
+        <div className="col-span-1" />
+        <div className="col-span-1">
           <a
-            href="https://www.github.com"
+            href="https://www.google.com/maps/place/Toronto,+ON/@43.7181552,-79.5184864,11z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
             target="_blank"
-            rel="noreferrer noopener"
+            rel="noopener noreferrer"
+            className="flex items-center"
+            title="Toronto, ON"
           >
-            github
+            <p className="time">■</p> <p className="ml-2 text-sm">{time}</p>
           </a>
-        </li>
-        <li>
-          <a
-            href="https:/www.twitter.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            instagram
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <Link href="/moodboard">
-            <a>moodboard</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/guestbook">
-            <a>guestbook</a>
-          </Link>
-        </li>
-        <li>{renderThemeChanger()}</li>
-      </ul>
+        </div>
+      </div>
+      <div className="grid grid-cols-3">
+        <ul className="space-y-2">
+          <li>
+            <Link href="/#work">
+              <a>work</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>about</a>
+            </Link>
+          </li>
+        </ul>
+        <ul className="space-y-2">
+          <li>
+            <a
+              href="https://www.github.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https:/www.twitter.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              instagram
+            </a>
+          </li>
+        </ul>
+        <ul className="space-y-2">
+          <li>
+            <Link href="/moodboard">
+              <a>moodboard</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/guestbook">
+              <a>guestbook</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>home</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 };
