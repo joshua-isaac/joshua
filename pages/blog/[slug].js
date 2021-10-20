@@ -35,7 +35,7 @@ export const Text = ({ text }) => {
 };
 
 const Post = ({ page, blocks }) => {
-  console.log("page", page);
+  // console.log("page", page);
   // console.log("blocks", blocks);
 
   const renderBlock = (block) => {
@@ -45,25 +45,31 @@ const Post = ({ page, blocks }) => {
     switch (type) {
       case "heading_2":
         return (
-          <h2 className="font-medium text-gray-900 text-2xl md:text-3xl dark:text-white mb-2">
+          <h2
+            className="font-medium text-gray-900 text-2xl md:text-3xl dark:text-white mb-2"
+            key={id}
+          >
             {value.text[0].plain_text}
           </h2>
         );
       case "heading_3":
         return (
-          <h2 className="font-medium text-gray-900 text-xl md:text-2xl dark:text-white mb-2">
+          <h2
+            className="font-medium text-gray-900 text-xl md:text-2xl dark:text-white mb-2"
+            key={id}
+          >
             {value.text[0].plain_text}
           </h2>
         );
       case "paragraph":
         return (
-          <p className="mb-5 text-gray-500 dark:text-gray-400">
+          <p className="mb-5 text-gray-500 dark:text-gray-400" key={id}>
             <Text text={value.text} />
           </p>
         );
       case "callout":
         return (
-          <div className="bg-gray-200 p-4 rounded-md mb-4">
+          <div className="bg-gray-200 p-4 rounded-md mb-4" key={id}>
             <div className="flex">
               <h4 className="mr-3">{value.icon.emoji}</h4>
               <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
@@ -74,7 +80,10 @@ const Post = ({ page, blocks }) => {
         );
       case "quote":
         return (
-          <blockquote className="mb-4 border-l-4 border-gray-900 dark:border-white">
+          <blockquote
+            className="mb-4 border-l-4 border-gray-900 dark:border-white"
+            key={id}
+          >
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed pl-2">
               <Text text={value.text} />
             </p>
@@ -82,21 +91,21 @@ const Post = ({ page, blocks }) => {
         );
       case "numbered_list_item":
         return (
-          <ol className="list-decimal pl-4 space-7-2 mb-4">
+          <ol className="list-decimal pl-4 space-7-2 mb-4" key={id}>
             <li>number</li>
             <li>number</li>
           </ol>
         );
       case "bulleted_list_item":
         return (
-          <ul className="list-disc pl-4 space-y-2 mb-4">
+          <ul className="list-disc pl-4 space-y-2 mb-4" key={id}>
             <li>bullet</li>
             <li>bullet</li>
           </ul>
         );
       case "image":
         return (
-          <div className="mb-4">
+          <div className="mb-4" key={id}>
             <Image
               src={value.file?.url}
               alt={value.caption[0]?.plain_text}
