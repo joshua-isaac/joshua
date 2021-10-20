@@ -7,7 +7,7 @@ const Moodboard = () => {
   // set up hero text
   const text = (
     <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-3xl">
-      my moodboard is curated from the help of{" "}
+      My moodboard is curated from the help of{" "}
       <a
         href="https://archillect.com/about"
         target="_blank"
@@ -39,7 +39,7 @@ const Moodboard = () => {
 
   return (
     <section className="my-2 container">
-      <PageHero text={text} title="moodboard" />
+      <PageHero text={text} title="Moodboard" />
       {!data && (
         <div className="px-4 flex justify-center">
           <CgSpinnerAlt className="animate-spin text-gray-900 dark:text-white text-2xl" />

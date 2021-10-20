@@ -16,15 +16,15 @@ const HomeHero = () => {
         </div>
         <div className="ml-8">
           <h1 className="text-3xl md:text-5xl mb-1 md:mb-2 font-medium text-gray-900 dark:text-white">
-            hello, {"i'm"} joshua
+            Hello, {"I'm"} Joshua
           </h1>
           <p className="hidden md:block text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-2xl">
-            frontend web developer focused on performance and simplicity —
+            Frontend web developer focused on performance and simplicity —
             building dynamic websites, web applications, and e-commerce
-            solutions that convert.
+            solutions.
           </p>
           <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md md:hidden">
-            building the modern web
+            Building the modern web
           </p>
         </div>
       </section>

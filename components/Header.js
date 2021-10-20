@@ -46,25 +46,27 @@ const Header = () => {
           <ul className="flex space-x-4 text-sm md:text-base items-center">
             <li>
               <Link href="/#work">
-                <a>work</a>
+                <a title="Work">work</a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>blog</a>
+                <a title="Blog">blog</a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a>about</a>
+                <a title="About">about</a>
               </Link>
             </li>
             <li>
-              <a href="mailto:hello.joshua@hotmail.com">contact</a>
+              <a href="mailto:hello.joshua@hotmail.com" title="Contact">
+                contact
+              </a>
             </li>
             <li>
               <Link href="/">
-                <a>home</a>
+                <a title="Home">home</a>
               </Link>
             </li>
           </ul>

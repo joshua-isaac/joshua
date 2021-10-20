@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="col-span-1 flex items-center">
           <ImSpotify style={{ color: "#1ED760" }} />{" "}
           <p className="ml-2">
-            <span className="font-medium">not playing</span> -{" "}
+            <span>not playing</span> -{" "}
             <span className="text-gray-600">spotify</span>
           </p>
         </div>
@@ -47,44 +47,47 @@ const Footer = () => {
         <ul className="space-y-2">
           <li>
             <Link href="/#work">
-              <a>work</a>
+              <a title="Work">work</a>
             </Link>
           </li>
           <li>
             <Link href="/blog">
-              <a>blog</a>
+              <a title="Blog">blog</a>
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a>about</a>
+              <a title="About">about</a>
             </Link>
           </li>
         </ul>
         <ul className="space-y-2">
           <li>
             <a
-              href="https://www.github.com"
+              href="https://github.com/joshua-isaac"
               target="_blank"
               rel="noreferrer noopener"
+              title="GitHub"
             >
               github
             </a>
           </li>
           <li>
             <a
-              href="https:/www.twitter.com"
+              href="https://twitter.com/joshu____a"
               target="_blank"
               rel="noreferrer noopener"
+              title="Twitter"
             >
               twitter
             </a>
           </li>
           <li>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/joshu.a/"
               target="_blank"
               rel="noreferrer noopener"
+              title="Instagram"
             >
               instagram
             </a>
@@ -93,17 +96,17 @@ const Footer = () => {
         <ul className="space-y-2">
           <li>
             <Link href="/moodboard">
-              <a>moodboard</a>
+              <a title="Moodboard">moodboard</a>
             </Link>
           </li>
           <li>
             <Link href="/guestbook">
-              <a>guestbook</a>
+              <a title="Guestbook">guestbook</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>home</a>
+              <a title="Home">home</a>
             </Link>
           </li>
         </ul>
