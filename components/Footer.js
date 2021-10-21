@@ -23,13 +23,20 @@ const Footer = () => {
     <footer className="text-sm md:text-base text-gray-900 dark:text-white mt-10 container px-4 mb-8">
       <hr className="w-full border-1 border-gray-200 dark:border-gray-500 mb-8" />
       <div className="grid grid-cols-3 mb-10">
-        <div className="col-span-1 flex items-center">
-          <ImSpotify style={{ color: "#1ED760" }} />{" "}
-          <p className="ml-2">
-            <span>not playing</span> -{" "}
-            <span className="text-gray-600">spotify</span>
+        <div className="flex items-center">
+          <p>
+            <ImSpotify style={{ color: "#1ED760" }} className="text-lg mr-2" />{" "}
           </p>
+          <marquee width="40%" direction="left" scrollamount="3">
+            <div className="col-span-1 flex items-center">
+              <p className="ml-2">
+                <span>not playing</span> -{" "}
+                <span className="text-gray-600">spotify</span>
+              </p>
+            </div>
+          </marquee>
         </div>
+
         <div className="col-span-1" />
         <div className="col-span-1">
           <a

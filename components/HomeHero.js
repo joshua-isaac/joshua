@@ -24,7 +24,7 @@ const HomeHero = () => {
             solutions.
           </p>
           <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md md:hidden">
-            Building the modern web
+            Building the modern web.
           </p>
         </div>
       </section>

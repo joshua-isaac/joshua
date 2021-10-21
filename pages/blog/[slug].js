@@ -85,7 +85,7 @@ const Post = ({ page, blocks }) => {
             className="mb-4 border-l-4 border-gray-900 dark:border-white"
             key={id}
           >
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed pl-2">
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed pl-4 italic">
               <Text text={value.text} />
             </p>
           </blockquote>
