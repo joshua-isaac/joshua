@@ -15,9 +15,9 @@ const LatestPosts = ({ posts }) => {
                 <span className="text-xs text-gray-500 dark:text-gray-400">
                   Posted on {format(new Date(post.date.start), "MMMM dd, yyy")}
                 </span>
-                <h5 className="text-gray-900 dark:text-white text-2xl font-medium mb-1">
+                <h4 className="text-gray-900 dark:text-white text-2xl font-medium mb-1">
                   {post.title}
-                </h5>
+                </h4>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                   {post.excerpt}
                 </p>

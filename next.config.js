@@ -1,7 +1,9 @@
-const { getRedirectStatus } = require("next/dist/lib/load-custom-routes");
-
 module.exports = {
   reactStrictMode: true,
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
   images: {
     domains: ["66.media.tumblr.com", "s3.us-west-2.amazonaws.com"],
   },
