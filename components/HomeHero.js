@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroImage from "../public/assets/pic1.jpg";
+import heroImage from "../public/assets/headshot.jpg";
 
 const HomeHero = () => {
   return (
@@ -9,8 +9,8 @@ const HomeHero = () => {
           <Image
             src={heroImage}
             alt="joshua isaac"
-            width="200"
-            height="200"
+            width="500"
+            height="500"
             className="rounded-md object-cover"
           />
         </div>

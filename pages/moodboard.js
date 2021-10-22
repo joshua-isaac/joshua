@@ -2,6 +2,7 @@ import useSWR from "swr";
 import Image from "next/image";
 import PageHero from "../components/PageHero";
 import { CgSpinnerAlt } from "react-icons/cg";
+import { NextSeo } from "next-seo";
 
 const Moodboard = () => {
   // set up hero text
@@ -38,38 +39,41 @@ const Moodboard = () => {
   const { data, error } = useSWR("/api/scraper", fetcher);
 
   return (
-    <section className="my-2 container">
-      <PageHero text={text} title="Moodboard" />
-      {!data && (
-        <div className="px-4 flex justify-center">
-          <CgSpinnerAlt className="animate-spin text-gray-900 dark:text-white text-2xl" />
-        </div>
-      )}
-      {error ||
-        (data?.images.length <= 0 && (
-          <p className="px-4">moodboard broken :(</p>
-        ))}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center px-4">
-        {data?.images.map((image) => (
-          <div className="relative" key={image.id}>
-            <a
-              href={`https://archillect.com/${image.id}`}
-              target="_blank"
-              rel="noreferrer noopener"
-              title={`#${image.id}`}
-            >
-              <Image
-                src={image.url}
-                width="500"
-                height="500"
-                objectFit="contain"
-                alt="stimulating visual content"
-              />
-            </a>
+    <>
+      <NextSeo title="Moodboard | Joshua Isaac" />
+      <section className="my-2 container">
+        <PageHero text={text} title="Moodboard" />
+        {!data && (
+          <div className="px-4 flex justify-center">
+            <CgSpinnerAlt className="animate-spin text-gray-900 dark:text-white text-2xl" />
           </div>
-        ))}
-      </div>
-    </section>
+        )}
+        {error ||
+          (data?.images.length <= 0 && (
+            <p className="px-4">moodboard broken :(</p>
+          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center px-4">
+          {data?.images.map((image) => (
+            <div className="relative" key={image.id}>
+              <a
+                href={`https://archillect.com/${image.id}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                title={`#${image.id}`}
+              >
+                <Image
+                  src={image.url}
+                  width="500"
+                  height="500"
+                  objectFit="contain"
+                  alt="stimulating visual content"
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

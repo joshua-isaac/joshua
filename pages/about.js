@@ -1,4 +1,5 @@
 import PageHero from "../components/PageHero";
+import { NextSeo } from "next-seo";
 
 const About = () => {
   // set up hero text
@@ -38,6 +39,7 @@ const About = () => {
   );
   return (
     <>
+      <NextSeo title="About | Joshua Isaac" />
       <PageHero title="About" text={text} />
     </>
   );

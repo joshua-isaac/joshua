@@ -2,6 +2,7 @@ import { getDatabase, getPage, getBlocks } from "../../lib/notion";
 import Image from "next/image";
 import slugify from "slugify";
 import { format } from "date-fns";
+import { NextSeo } from "next-seo";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -17,7 +18,7 @@ export const Text = ({ text }) => {
         key={index}
         className={`${[
           bold ? `font-semibold` : "",
-          code ? `code` : "",
+          code ? `code dark:text-gray-900` : "",
           italic ? `italic` : "",
           strikethrough ? `line-through` : "",
           underline ? `underline` : "",
@@ -91,15 +92,17 @@ const Post = ({ page, blocks }) => {
       case "numbered_list_item":
         return (
           <ol className="list-decimal pl-4 space-7-2 mb-4" key={id}>
-            <li>number</li>
-            <li>number</li>
+            <li className="text-gray-500 dark:text-gray-400 leading-relaxed">
+              <Text text={value.text} />
+            </li>
           </ol>
         );
       case "bulleted_list_item":
         return (
           <ul className="list-disc pl-4 space-y-2 mb-4" key={id}>
-            <li>bullet</li>
-            <li>bullet</li>
+            <li className="text-gray-500 dark:text-gray-400 leading-relaxed">
+              <Text text={value.text} />
+            </li>
           </ul>
         );
       case "image":
@@ -118,22 +121,30 @@ const Post = ({ page, blocks }) => {
   };
 
   return (
-    <article className="container px-4">
-      <div className="my-10 md:mt-20 md:mb-8">
-        <h1 className="text-4xl md:text-4xl font-medium mb-2 leading-normal">
-          {page.properties.title.title[0].plain_text}
-        </h1>
-        {page.properties.date.date && (
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-medium text-xs">
-            Posted on{" "}
-            {format(new Date(page.properties.date.date?.start), "MMMM dd, yyy")}
-          </p>
-        )}
-      </div>
-      {blocks.map((block) => (
-        <div key={block.id}>{renderBlock(block)}</div>
-      ))}
-    </article>
+    <>
+      <NextSeo
+        title={`${page.properties.title.title[0].plain_text} | Joshua Isaac`}
+      />
+      <article className="container px-4">
+        <div className="my-10 md:mt-20 md:mb-8">
+          <h1 className="text-4xl md:text-4xl font-medium mb-2 leading-normal">
+            {page.properties.title.title[0].plain_text}
+          </h1>
+          {page.properties.date.date && (
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-medium text-xs">
+              Posted on{" "}
+              {format(
+                new Date(page.properties.date.date?.start),
+                "MMMM dd, yyy"
+              )}
+            </p>
+          )}
+        </div>
+        {blocks.map((block) => (
+          <div key={block.id}>{renderBlock(block)}</div>
+        ))}
+      </article>
+    </>
   );
 };
 

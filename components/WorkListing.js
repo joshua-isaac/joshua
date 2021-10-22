@@ -1,6 +1,6 @@
 const WorkListing = ({ projects }) => {
   return (
-    <section className="container px-4 mb-10 md:mb-20" id="work">
+    <section className="container px-4 my-20 md:mb-20" id="work">
       <h3 className="text-3xl mb-6 font-medium text-gray-900 dark:text-white">
         Work
       </h3>
