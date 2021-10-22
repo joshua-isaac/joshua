@@ -69,10 +69,10 @@ const Post = ({ page, blocks }) => {
         );
       case "callout":
         return (
-          <div className="bg-gray-200 p-4 rounded-md mb-4" key={id}>
+          <div className="bg-gray-100 p-4 rounded-md mb-4" key={id}>
             <div className="flex">
               <h4 className="mr-3">{value.icon.emoji}</h4>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-900 leading-relaxed">
                 <Text text={value.text} />
               </p>
             </div>
