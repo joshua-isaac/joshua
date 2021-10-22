@@ -30,7 +30,7 @@ const SpotifyPlayer = ({ data }) => {
           </p>
           <div>
             {data?.songUrl ? (
-              <Marquee gradient={false} delay={2}>
+              <Marquee gradient={false} delay={2} pauseOnHover={true}>
                 <p className="ml-2 text-sm">
                   <span>
                     {data?.title} - {data?.artist}
