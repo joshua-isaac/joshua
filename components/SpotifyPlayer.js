@@ -9,8 +9,8 @@ const SpotifyPlayer = ({ data }) => {
           className="text-lg mr-3 -mt-2"
         />{" "}
       </p>
-      <div className="pr-4">
-        <marquee style={{ width: "100%" }} direction="left" scrollamount="3">
+      <div>
+        <marquee style={{ width: "90%" }} direction="left" scrollamount="3">
           <div className="col-span-1 flex items-center">
             <p className="ml-2 text-sm">
               {data?.songUrl ? (
