@@ -36,9 +36,7 @@ export const Text = ({ text }) => {
 };
 
 const Post = ({ page, blocks }) => {
-  // console.log("page", page);
-  // console.log("blocks", blocks);
-
+  // render blocks
   const renderBlock = (block) => {
     const { type, id } = block;
     const value = block[type];

@@ -1,45 +1,31 @@
 import Link from "next/link";
+import { format } from "date-fns";
 
-const LatestPosts = () => {
+const LatestPosts = ({ posts }) => {
   return (
-    <div className="container px-4">
-      <h3 className="text-xl md:text-3xl mb-6 font-medium text-gray-900 dark:text-white">
-        latest posts
+    <div className="container px-4 mb-10">
+      <h3 className="text-3xl mb-6 font-medium text-gray-900 dark:text-white">
+        Latest Posts
       </h3>
-      <div className="grid grid-cols-2 gap-8">
-        <article className="bg-gray-200 rounded-lg p-5">
-          <h5 className="text-gray-900 text-lg font-medium mb-2">
-            next.js is fkn awesome
-          </h5>
-          <p className="text-gray-500 leading-relaxed truncate mb-6">
-            gatsby is a great way to learn react because it takes away a lot of
-            the burden needed to get going with a react project.
-          </p>
-          <div className="flex justify-end">
-            <Link href="/">
-              <a>read more</a>
-            </Link>
-          </div>
-        </article>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        {posts.map((post) => (
+          <Link href={`/blog/${post.slug}`} key={post.slug}>
+            <a title={post.title}>
+              <article className="rounded-md" key={post.slug}>
+                <span className="text-xs text-gray-500 dark:text-gray-400">
+                  Posted on {format(new Date(post.date.start), "MMMM dd, yyy")}
+                </span>
+                <h5 className="text-gray-900 dark:text-white text-2xl font-medium mb-1">
+                  {post.title}
+                </h5>
+                <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                  {post.excerpt}
+                </p>
+              </article>
+            </a>
+          </Link>
+        ))}
       </div>
-      {/* <article className="mb-6">
-        <h5 className="text-gray-900 text-lg font-medium mb-2">
-          next.js is fkn awesome
-        </h5>
-        <p className="text-gray-600 leading-relaxed">
-          gatsby is a great way to learn react because it takes away a lot of
-          the burden needed to get going with a react project.
-        </p>
-      </article>
-      <article>
-        <h5 className="text-gray-900 text-xl font-medium mb-2">
-          gatsby is a great way to learn react
-        </h5>
-        <p className="text-gray-600 leading-relaxed">
-          gatsby is a great way to learn react because it takes away a lot of
-          the burden needed to get going with a react project.
-        </p>
-      </article> */}
     </div>
   );
 };

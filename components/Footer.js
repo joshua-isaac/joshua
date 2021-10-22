@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import Link from "next/link";
-import { ImSpotify } from "react-icons/im";
+import useSWR from "swr";
+import SpotifyPlayer from "./SpotifyPlayer";
+import AnimatedBars from "./AnimatedBars";
 
 const Footer = () => {
   // set current time
@@ -19,25 +21,22 @@ const Footer = () => {
     }, 1000);
   }, []);
 
+  // set up fetcher method
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+
+  // get spotify player data
+  const { data } = useSWR("/api/spotify", fetcher);
+
   return (
-    <footer className="text-sm md:text-base text-gray-900 dark:text-white mt-10 container px-4 mb-8">
+    <footer className="text-base text-gray-900 dark:text-white mt-10 container px-4 mb-8">
       <hr className="w-full border-1 border-gray-200 dark:border-gray-500 mb-8" />
       <div className="grid grid-cols-3 mb-10">
-        <div className="flex items-center">
-          <p>
-            <ImSpotify style={{ color: "#1ED760" }} className="text-lg mr-2" />{" "}
-          </p>
-          <marquee width="40%" direction="left" scrollamount="3">
-            <div className="col-span-1 flex items-center">
-              <p className="ml-2">
-                <span>not playing</span> -{" "}
-                <span className="text-gray-600">spotify</span>
-              </p>
-            </div>
-          </marquee>
+        <div className="col-span-1">
+          <SpotifyPlayer data={data} />
         </div>
-
-        <div className="col-span-1" />
+        <div className="col-span-1">
+          <AnimatedBars data={data} />
+        </div>
         <div className="col-span-1">
           <a
             href="https://www.google.com/maps/place/Toronto,+ON/@43.7181552,-79.5184864,11z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
@@ -104,11 +103,6 @@ const Footer = () => {
           <li>
             <Link href="/moodboard">
               <a title="Moodboard">moodboard</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/guestbook">
-              <a title="Guestbook">guestbook</a>
             </Link>
           </li>
           <li>

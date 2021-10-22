@@ -4,27 +4,26 @@ import heroImage from "../public/assets/pic1.jpg";
 const HomeHero = () => {
   return (
     <>
-      <section className="container px-4 my-10 md:my-20 flex items-center">
-        <div className="w-20 h-20 md:w-40 md:h-40">
+      <section className="container px-4 my-10 md:my-20 md:flex items-center">
+        <div className="w-32 h-32 md:w-40 md:h-40 mb-8 md:mb-0 rounded-md relative">
           <Image
             src={heroImage}
             alt="joshua isaac"
             width="200"
             height="200"
-            className="rounded-lg object-cover border-2 border-gray-900"
+            className="rounded-md object-cover"
           />
         </div>
-        <div className="ml-8">
-          <h1 className="text-3xl md:text-5xl mb-1 md:mb-2 font-medium text-gray-900 dark:text-white">
+        <div className="md:ml-8">
+          <h1 className="text-4xl md:text-5xl mb-1 md:mb-2 font-medium text-gray-900 dark:text-white">
             Hello, {"I'm"} Joshua
           </h1>
-          <p className="hidden md:block text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-2xl">
-            Frontend web developer focused on performance and simplicity —
-            building dynamic websites, web applications, and e-commerce
-            solutions.
-          </p>
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md md:hidden">
-            Building the modern web.
+          <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
+            Frontend web developer building dynamic websites, web applications,{" "}
+            <br className="hidden md:block" />
+            and e-commerce solutions with{" "}
+            <span className="font-medium">performance</span> and{" "}
+            <span className="font-medium">simplicity</span>.
           </p>
         </div>
       </section>
