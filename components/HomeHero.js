@@ -4,7 +4,7 @@ import heroImage from "../public/assets/pic1.jpg";
 const HomeHero = () => {
   return (
     <>
-      <section className="container px-4 my-10 md:mt-20 mb-32 md:flex items-center">
+      <section className="container px-4 my-10 md:my-20 md:flex items-center">
         <div className="w-32 h-32 md:w-40 md:h-40 mb-8 md:mb-0 rounded-md relative">
           <Image
             src={heroImage}
