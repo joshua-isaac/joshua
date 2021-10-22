@@ -34,7 +34,7 @@ const Footer = () => {
           <SpotifyPlayer data={data} />
         </div>
         <div className="col-span-1" />
-        <div className="col-span-1 -mt-1 md:mt-0">
+        <div className={`col-span-1 ${data?.songUrl ? `mt-2` : null}`}>
           <a
             href="https://www.google.com/maps/place/Toronto,+ON/@43.7181552,-79.5184864,11z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
             target="_blank"
@@ -42,7 +42,7 @@ const Footer = () => {
             className="flex items-center"
             title="Toronto, ON"
           >
-            <p className="time ">■</p> <p className="ml-2 text-sm">{time}</p>
+            <p className={`time`}>■</p> <p className="ml-2 text-sm">{time}</p>
           </a>
         </div>
       </div>

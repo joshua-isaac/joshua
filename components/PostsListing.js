@@ -1,9 +1,7 @@
-import format from "date-fns/format";
-
 import Link from "next/link";
 const PostsListing = ({ posts }) => {
   return (
-    <section className="container">
+    <section className="container px-4">
       {/* <input
         type="text"
         placeholder="Search posts..."

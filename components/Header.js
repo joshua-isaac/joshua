@@ -24,7 +24,7 @@ const Header = () => {
           onClick={() => setTheme("light")}
           className="bg-gray-200 p-2 rounded-lg"
         >
-          <FiSun className="text-black" />
+          <FiSun className="text-black text-lg" />
         </button>
       );
     } else {
@@ -33,7 +33,7 @@ const Header = () => {
           onClick={() => setTheme("dark")}
           className="bg-gray-200 p-2 rounded-lg"
         >
-          <FiMoon className="text-black" />
+          <FiMoon className="text-black text-lg" />
         </button>
       );
     }
@@ -43,7 +43,7 @@ const Header = () => {
     <header className="bg-white bg-opacity-60 sticky-nav dark:bg-black dark:bg-opacity-0">
       <div className="flex justify-between items-center py-4 text-sm md:text-base text-gray-900 dark:text-white container px-4">
         <nav>
-          <ul className="flex space-x-4 text-sm md:text-base items-center">
+          <ul className="flex space-x-4 text-base items-center">
             <li>
               <Link href="/#work">
                 <a title="Work">work</a>

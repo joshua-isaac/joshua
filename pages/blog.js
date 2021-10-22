@@ -7,7 +7,8 @@ const Blog = ({ posts }) => {
   // set up hero text
   const text = (
     <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-3xl">
-      Sometimes i write, sometimes i cry
+      I plan to occasionally write about things I learn, modern web development,
+      and how the web is changing.
     </p>
   );
   return (
