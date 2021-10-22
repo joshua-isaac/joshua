@@ -4,9 +4,9 @@ import { format } from "date-fns";
 const LatestPosts = ({ posts }) => {
   return (
     <div className="container px-4 mb-10">
-      <h3 className="text-3xl mb-6 font-medium text-gray-900 dark:text-white">
+      <h2 className="text-3xl mb-6 font-medium text-gray-900 dark:text-white">
         Latest Posts
-      </h3>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {posts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.slug}>

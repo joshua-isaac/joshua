@@ -23,7 +23,7 @@ const Header = () => {
         <button
           onClick={() => setTheme("light")}
           className="bg-gray-200 p-2 rounded-lg"
-          name="Theme Toggler"
+          aria-label="toggle"
         >
           <FiSun className="text-black text-lg" />
         </button>
@@ -33,7 +33,7 @@ const Header = () => {
         <button
           onClick={() => setTheme("dark")}
           className="bg-gray-200 p-2 rounded-lg"
-          name="Theme Toggler"
+          aria-label="toggle"
         >
           <FiMoon className="text-black text-lg" />
         </button>
