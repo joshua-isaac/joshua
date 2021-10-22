@@ -12,6 +12,7 @@ const HomeHero = () => {
             width="500"
             height="500"
             className="rounded-md object-cover"
+            priority="true"
           />
         </div>
         <div className="md:ml-8">
