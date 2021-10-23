@@ -1,30 +1,14 @@
 import PageHero from "../components/PageHero";
 import { NextSeo } from "next-seo";
+import { motion } from "framer-motion";
 
 const About = () => {
   // set up hero text
   const text = (
     <div className="max-w-2xl">
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Hello and welcome to my little corner of the internet :)
-      </p>
-      <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        My name is Joshua Isaac and I’m a web developer currently working on the
-        Support team at{" "}
-        <a
-          href="https://www.agilitycms.com"
-          className="text-blue"
-          target="_blank"
-          title="Agility Cms"
-          rel="noopener noreferrer"
-        >
-          Agility CMS.
-        </a>
-        .
-      </p>
-      <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Born and raised in Toronto, i went to school at Humber College
-        graduating with an advanced diploma in Web Design & Interactive Media.
+        Hello, my name is Joshua Isaac and I’m a frontend web developer. Welcome
+        to my little corner of the internet!
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         I am extremely passionate about jamstack development and building
@@ -38,10 +22,10 @@ const About = () => {
     </div>
   );
   return (
-    <>
+    <div>
       <NextSeo title="About | Joshua Isaac" />
       <PageHero title="About" text={text} />
-    </>
+    </div>
   );
 };
 

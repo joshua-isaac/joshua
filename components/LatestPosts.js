@@ -12,12 +12,12 @@ const LatestPosts = ({ posts }) => {
           <Link href={`/blog/${post.slug}`} key={post.slug}>
             <a title={post.title}>
               <article className="rounded-md" key={post.slug}>
-                <span className="text-xs text-gray-500 dark:text-gray-400">
+                <h3 className="text-gray-900 dark:text-white text-2xl font-medium">
+                  {post.title}
+                </h3>
+                <span className="text-xs text-gray-500 dark:text-gray-400 block mb-3">
                   Posted on {format(new Date(post.date.start), "MMMM dd, yyy")}
                 </span>
-                <h4 className="text-gray-900 dark:text-white text-2xl font-medium mb-1">
-                  {post.title}
-                </h4>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                   {post.excerpt}
                 </p>

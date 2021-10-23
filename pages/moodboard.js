@@ -39,7 +39,7 @@ const Moodboard = () => {
   const { data, error } = useSWR("/api/scraper", fetcher);
 
   return (
-    <>
+    <div>
       <NextSeo title="Moodboard | Joshua Isaac" />
       <section className="my-2 container">
         <PageHero text={text} title="Moodboard" />
@@ -73,7 +73,7 @@ const Moodboard = () => {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

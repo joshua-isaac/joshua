@@ -6,11 +6,11 @@ import slugify from "slugify";
 
 const Home = ({ projects, posts }) => {
   return (
-    <>
+    <div>
       <HomeHero />
       <WorkListing projects={projects} />
       <LatestPosts posts={posts} />
-    </>
+    </div>
   );
 };
 

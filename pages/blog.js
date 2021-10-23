@@ -3,6 +3,7 @@ import PostsListing from "../components/PostsListing";
 import slugify from "slugify";
 import { getDatabase } from "../lib/notion";
 import { NextSeo } from "next-seo";
+import { motion } from "framer-motion";
 
 const Blog = ({ posts }) => {
   // set up hero text
@@ -13,14 +14,14 @@ const Blog = ({ posts }) => {
     </p>
   );
   return (
-    <>
+    <div>
       <NextSeo
         title="Blog | Joshua Isaac"
         description="My thoughts on modern web development, programming, technology, food and my personal life."
       />
       <PageHero title="Blog" text={text} />
       <PostsListing posts={posts} />
-    </>
+    </div>
   );
 };
 
