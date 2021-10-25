@@ -16,7 +16,7 @@ const About = () => {
         modern technology and architecture.
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Aside from being fascinated by the world wide web, i enjoy fashion,
+        Aside from being fascinated by the world wide web, I enjoy fashion,
         tacos, and house music.
       </p>
     </div>

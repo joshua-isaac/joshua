@@ -28,7 +28,7 @@ export async function getStaticProps() {
   const projects = workResponse.map((project) => {
     return {
       title: project.properties.title.title[0].plain_text,
-      image: project.properties.image.files[0].file.url,
+      // image: project.properties.image.files[0].file.url,
       url: project.properties.url.url,
       description: project.properties.description.rich_text[0].plain_text,
     };

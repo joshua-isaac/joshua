@@ -9,17 +9,21 @@ const SpotifyPlayer = ({ data }) => {
           <ImSpotify style={{ color: "#1ED760" }} className="text-lg mr-3" />{" "}
         </p>
         <div>
-          <Marquee gradient={false} pauseOnHover={true}>
-            {data?.songUrl ? (
+          {data?.songUrl ? (
+            <Marquee gradient={false} pauseOnHover={true}>
               <p className="ml-2 text-sm">
                 <span>
                   {data?.title} - {data?.artist}
                 </span>
               </p>
-            ) : (
-              <p className="ml-2 text-sm">Spotify Player - Offline</p>
-            )}
-          </Marquee>
+            </Marquee>
+          ) : (
+            <p className="ml-2 text-sm">
+              <span className="text-gray-500 dark:text-gray-400 block mt-1">
+                Offline
+              </span>
+            </p>
+          )}
         </div>
       </a>
     </div>

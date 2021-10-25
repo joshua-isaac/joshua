@@ -22,20 +22,20 @@ const Header = () => {
       return (
         <button
           onClick={() => setTheme("light")}
-          className="bg-gray-200 p-2 rounded-lg"
+          className="bg-gray-200 p-2 rounded-md"
           aria-label="toggle"
         >
-          <FiSun className="text-black text-lg" />
+          <FiSun className="text-black text-md" />
         </button>
       );
     } else {
       return (
         <button
           onClick={() => setTheme("dark")}
-          className="bg-gray-200 p-2 rounded-lg"
+          className="bg-gray-200 p-2 rounded-md"
           aria-label="toggle"
         >
-          <FiMoon className="text-black text-lg" />
+          <FiMoon className="text-black text-md" />
         </button>
       );
     }

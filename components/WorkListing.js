@@ -23,12 +23,11 @@ const WorkListing = ({ projects }) => {
       <h2 className="text-3xl mb-6 font-medium text-gray-900 dark:text-white">
         Work
       </h2>
-      <motion.div variants={container} initial="hidden" animate="show">
+      <motion.div>
         {projects.map((project, i) => (
           <motion.div
             className="border-b border-gray-200 dark:border-gray-500 py-6 first:pt-0"
             key={i}
-            variants={item}
           >
             <a
               href={project.url}
@@ -37,13 +36,18 @@ const WorkListing = ({ projects }) => {
               rel="noopener noreferrer"
               title={project.title}
             >
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 md:mb-0">
                 {project.description}
               </p>
               <h3 className="text-xl md:text-2xl font-medium">
                 {project.title}
               </h3>
             </a>
+            <div className="mt-0 md:mt-4">
+              <p className="text-right text-sm text-gray-500 dark:text-gray-400">
+                Web Development, E-Commerce, Hosting
+              </p>
+            </div>
           </motion.div>
         ))}
       </motion.div>
