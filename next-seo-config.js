@@ -1,7 +1,7 @@
 export default {
   title: "Joshua Isaac | Frontend Web Developer",
   description:
-    "Front-end web developer delivering better performance with modern technologies and architecture. Freelance developer based in Toronto.",
+    "Front-end web developer delivering better performance with modern technologies and architecture.",
   openGraph: {
     type: "website",
     locale: "en_ca",
