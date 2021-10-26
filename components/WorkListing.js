@@ -43,11 +43,11 @@ const WorkListing = ({ projects }) => {
                 {project.title}
               </h3>
             </a>
-            <div className="mt-0 md:mt-4">
+            {/* <div className="mt-0 md:mt-4">
               <p className="text-right text-sm text-gray-500 dark:text-gray-400">
                 Web Development, E-Commerce, Hosting
               </p>
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </motion.div>
