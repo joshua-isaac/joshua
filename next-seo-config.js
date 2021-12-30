@@ -9,7 +9,7 @@ export default {
     site_name: "Joshua Isaac",
     images: [
       {
-        url: "https://www.joshuaisaac..ca/og-image.png",
+        url: "https://www.joshuaisaac.ca/assets/og-image.png",
         width: 1200,
         height: 627,
         alt: "Joshua Isaac",
