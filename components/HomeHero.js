@@ -20,9 +20,8 @@ const HomeHero = () => {
           Hello, {"I'm"} Joshua,
         </h1>
         <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
-          Frontend Engineer building (and breaking) dynamic websites,
-          applications, and e-commerce solutions with performance and
-          simplicity.
+          Frontend Engineer building (and breaking) dynamic websites and web
+          applications with performance and simplicity.
         </p>
       </div>
     </section>
