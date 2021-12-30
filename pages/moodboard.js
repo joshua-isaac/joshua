@@ -54,18 +54,14 @@ const Moodboard = () => {
           ))}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center px-4">
           {data?.images.map((image) => (
-            <div key={image.id}>
+            <div key={image.id} className="flex items-center">
               <a
                 href={`https://archillect.com/${image.id}`}
                 target="_blank"
                 rel="noreferrer noopener"
                 title={`#${image.id}`}
               >
-                <img
-                  src={image.url}
-                  alt="stimulating visual content"
-                  className="w-56 h-56 object-contain"
-                />
+                <img src={image.url} alt="stimulating visual content" />
               </a>
             </div>
           ))}

@@ -8,6 +8,15 @@ export default {
     url: "https://www.joshuaisaac.ca",
     site_name: "Joshua Isaac",
   },
+  images: [
+    {
+      url: "https://www.joshuaisaac..ca/og-image.png",
+      width: 1200,
+      height: 627,
+      alt: "Joshua Isaac",
+      type: "image/png",
+    },
+  ],
   twitter: {
     handle: "@joshu____a",
     cardType: "summary_large_image",

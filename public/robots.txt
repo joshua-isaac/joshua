@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://joshuaisaac.ca
+
+# Sitemaps
+Sitemap: https://joshuaisaac.ca/sitemap.xml
