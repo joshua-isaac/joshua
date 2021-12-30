@@ -5,7 +5,11 @@ export default {
   openGraph: {
     type: "website",
     locale: "en_ca",
-    url: "https://www.joshuaisaac.ca",
+    url:
+      "https://www.joshuaisaac.ca" ||
+      "https://www.joshuaisaac.ca/about" ||
+      "https://www.joshuaisaac.ca/blog" ||
+      "https://www.joshuaisaac.ca/moodboard",
     site_name: "Joshua Isaac",
     images: [
       {
