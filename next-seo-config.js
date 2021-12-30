@@ -9,7 +9,7 @@ export default {
       "https://www.joshuaisaac.ca" ||
       "https://www.joshuaisaac.ca/about" ||
       "https://www.joshuaisaac.ca/blog" ||
-      "https://www.joshuaisaac.ca/moodboard",
+      "https://www.joshuaisaac.ca/mood-board",
     site_name: "Joshua Isaac",
     images: [
       {

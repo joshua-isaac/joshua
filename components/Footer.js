@@ -98,8 +98,8 @@ const Footer = () => {
         </ul>
         <ul className="space-y-2">
           <li>
-            <Link href="/moodboard">
-              <a title="Moodboard">moodboard</a>
+            <Link href="/mood-board">
+              <a title="Mood Board">mood board</a>
             </Link>
           </li>
           <li>

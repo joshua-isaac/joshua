@@ -40,9 +40,9 @@ const Moodboard = () => {
 
   return (
     <div>
-      <NextSeo title="Moodboard | Joshua Isaac" />
+      <NextSeo title="Mood Board | Joshua Isaac" />
       <section className="my-2 container">
-        <PageHero text={text} title="Moodboard" />
+        <PageHero text={text} title="Mood Board" />
         {!data && (
           <div className="px-4 flex justify-center">
             <CgSpinnerAlt className="animate-spin text-gray-900 dark:text-white text-2xl" />
@@ -50,7 +50,7 @@ const Moodboard = () => {
         )}
         {error ||
           (data?.images.length <= 0 && (
-            <p className="px-4">moodboard broken :(</p>
+            <p className="px-4">Mood Board broken :(</p>
           ))}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center px-4">
           {data?.images.map((image) => (
