@@ -8,7 +8,7 @@ const Moodboard = () => {
   // set up hero text
   const text = (
     <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-3xl">
-      My moodboard is curated from the help of{" "}
+      My mood board is curated from the help of{" "}
       <a
         href="https://archillect.com/about"
         target="_blank"
