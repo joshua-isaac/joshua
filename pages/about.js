@@ -18,7 +18,7 @@ const About = () => {
           href="https://www.agilitycms.com"
           title="Agility CMS"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className="text-blue"
         >
           Agility CMS
