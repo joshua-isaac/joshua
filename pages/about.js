@@ -1,6 +1,5 @@
 import PageHero from "../components/PageHero";
 import { NextSeo } from "next-seo";
-import { motion } from "framer-motion";
 
 const About = () => {
   // set up hero text
