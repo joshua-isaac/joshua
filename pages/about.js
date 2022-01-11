@@ -9,7 +9,7 @@ const About = () => {
         Hello,
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        My name is Joshua Isaac and I’m a frontend engineer — welcome to my
+        My name is Joshua Isaac and I{"'"}m a frontend engineer — welcome to my
         little corner of the internet!
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
@@ -23,13 +23,14 @@ const About = () => {
         >
           Agility CMS
         </a>{" "}
-        as a support engineer and I'm extremely passionate about jamstack
+        as a support engineer and I{"'"}m extremely passionate about jamstack
         development and building dynamic websites and web applications using
         modern technology and architecture.
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Recently I've been intrigued by NFTs, and started to explore web3 and
-        the blockchain, and I'm pretty excited about the future of the internet.
+        Recently I{"'"}ve been intrigued by NFTs, and started to explore web3
+        and the blockchain, and I{"'"}m pretty excited about the future of the
+        internet.
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         Aside from being fascinated by the world wide web, I enjoy minimalism,
