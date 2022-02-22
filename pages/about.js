@@ -6,10 +6,7 @@ const About = () => {
   const text = (
     <div className="max-w-2xl">
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Hello,
-      </p>
-      <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        My name is Joshua Isaac and I{"'"}m a frontend engineer — welcome to my
+        Hey! My name is Joshua Isaac and I{"'"}m a software engineer — welcome to my
         little corner of the internet!
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
@@ -23,7 +20,7 @@ const About = () => {
         >
           Agility CMS
         </a>{" "}
-        as a support engineer and I{"'"}m extremely passionate about jamstack
+        as a Solution Architect and I{"'"}m extremely passionate about jamstack
         development and building dynamic websites and web applications using
         modern technology and architecture.
       </p>
