@@ -20,7 +20,7 @@ const HomeHero = () => {
           Hello, {"I'm"} Joshua
         </h1>
         <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
-          Software Engineer building (and breaking) things on the internet.
+          Software Engineer building (and breaking) websites and web applications on the internet.
         </p>
       </div>
     </section>
