@@ -17,11 +17,10 @@ const HomeHero = () => {
       </div>
       <div className="md:ml-8">
         <h1 className="text-4xl md:text-5xl mb-1 md:mb-2 font-medium text-gray-900 dark:text-white">
-          Hello, {"I'm"} Joshua,
+          Hello, {"I'm"} Joshua
         </h1>
         <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
-          Software Engineer building (and breaking) dynamic websites and web
-          applications with performance and simplicity.
+          Software Engineer building (and breaking) things on the internet.
         </p>
       </div>
     </section>
