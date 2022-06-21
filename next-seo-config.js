@@ -11,15 +11,7 @@ export default {
       "https://www.joshuaisaac.ca/blog" ||
       "https://www.joshuaisaac.ca/mood-board",
     site_name: "Joshua Isaac",
-    images: [
-      {
-        url: "https://www.joshuaisaac.ca/assets/og-image.png",
-        width: 1200,
-        height: 627,
-        alt: "Joshua Isaac",
-        type: "image/png",
-      },
-    ],
+    images: [],
   },
   twitter: {
     handle: "@joshu____a",
