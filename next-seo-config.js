@@ -1,7 +1,7 @@
 export default {
-  title: "Joshua Isaac | Frontend Engineer",
+  title: "Joshua Isaac | Software Engineer",
   description:
-    "Frontend Engineer delivering better website and web application performance with modern technologies and architecture.",
+    "Software engineer building (and breaking) things on the internet.",
   openGraph: {
     type: "website",
     locale: "en_ca",
