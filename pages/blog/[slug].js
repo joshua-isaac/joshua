@@ -1,8 +1,10 @@
-import { getDatabase, getPage, getBlocks } from "../../lib/notion";
 import Image from "next/image";
 import slugify from "slugify";
 import { format } from "date-fns";
 import { NextSeo } from "next-seo";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { getDatabase, getPage, getBlocks } from "../../lib/notion";
+import CopyButton from "../../components/CopyButton";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -25,7 +27,12 @@ export const Text = ({ text }) => {
         ].join(" ")} leading-relaxed`}
       >
         {text.link ? (
-          <a className="text-blue" href={text.link.url}>
+          <a
+            className="text-blue"
+            href={text.link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {text.content}
           </a>
         ) : (
@@ -41,8 +48,22 @@ const Post = ({ page, blocks }) => {
   const renderBlock = (block) => {
     const { type, id } = block;
     const value = block[type];
+    console.log(type);
+
+    console.log(value);
 
     switch (type) {
+      case "code":
+        return (
+          <>
+            <SyntaxHighlighter language={value.language}>
+              {value.text[0].plain_text}
+            </SyntaxHighlighter>
+            <div className="w-full flex justify-end">
+              <CopyButton text={value.text[0].plain_text} />
+            </div>
+          </>
+        );
       case "heading_2":
         return (
           <h2
@@ -112,7 +133,7 @@ const Post = ({ page, blocks }) => {
               src={value.file?.url}
               alt={value.caption[0]?.plain_text}
               width="1200"
-              height="630"
+              height="800"
               className="rounded-md object-cover"
             />
           </div>

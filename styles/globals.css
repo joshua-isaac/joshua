@@ -20,3 +20,7 @@
 .time {
   font-size: 0.5rem;
 }
+
+pre {
+  padding: 15px !important;
+}
