@@ -48,9 +48,6 @@ const Post = ({ page, blocks }) => {
   const renderBlock = (block) => {
     const { type, id } = block;
     const value = block[type];
-    console.log(type);
-
-    console.log(value);
 
     switch (type) {
       case "code":
