@@ -6,7 +6,7 @@ const CopyButton = ({ text }) => {
   return (
     <button
       onClick={setCopied}
-      className="text-gray-900 dark:text-white text-xs mt-2"
+      className="text-gray-900 dark:text-white text-xs my-4"
     >
       {isCopied ? `Copied` : `Copy Code`}
     </button>
