@@ -30,6 +30,7 @@ const About = () => {
           <li>Next.js</li>
           <li>TypeScript</li>
           <li>Vercel</li>
+          <li>Content Management Systems (CMS)</li>
           <li>Tailwind CSS</li>
           <li>GreenSock Animation Platform (GSAP)</li>
           <li>Framer Motion</li>
