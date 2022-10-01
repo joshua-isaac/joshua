@@ -36,8 +36,8 @@ const About = () => {
         </ul>
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        With the uptick in NFT's and decentralization, I've been continuing to further my knowledge on Ethereum and Web3. 
-        The future of our internet looks very exciting!
+       {`With the uptick in NFT's and decentralization, I've been continuing to further my knowledge on Ethereum and Web3. 
+        The future of our internet looks very exciting!`}
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         Aside from being fascinated by the World Wide Web, I enjoy minimalism,
