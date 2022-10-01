@@ -6,31 +6,41 @@ const About = () => {
   const text = (
     <div className="max-w-2xl">
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Hey! My name is Joshua Isaac and I{"'"}m a software engineer — welcome to my
-        little corner of the internet!
+        {`Hello! My name is Joshua and I'm a Software Engineer based out of Toronto, Ontario.`}
+      </p>
+      <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+        {`I'm extremely passionate about building dynamic websites and applications using modern technologies and architecture.`}
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         I currently work at{" "}
         <a
-          href="https://www.agilitycms.com"
-          title="Agility CMS"
+          href="https://www.nightshift.net"
+          title="Nightshift"
           target="_blank"
           rel="noreferrer"
           className="text-blue"
         >
-          Agility CMS
-        </a>{" "}
-        as a Solution Architect and I{"'"}m extremely passionate about jamstack
-        development and building dynamic websites and web applications using
-        modern technology and architecture.
+          Nightshift
+        </a>,{" "}
+        building immersive frontend websites and decentralized applications (<a href="https://ethereum.org/en/dapps/" target="_blank" rel="noopener noreferrer" className="text-blue" title="Decentralized Applications">dApps</a>).
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Recently I{"'"}ve been intrigued by NFTs, and started to explore web3
-        and the blockchain, and I{"'"}m pretty excited about the future of the
-        internet.
+        My technology toolbox includes:
+        <ul className="list-disc ml-4 mt-2 space-y-1">
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>Vercel</li>
+          <li>Tailwind CSS</li>
+          <li>GreenSock Animation Platform (GSAP)</li>
+          <li>Framer Motion</li>
+        </ul>
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        Aside from being fascinated by the world wide web, I enjoy minimalism,
+        With the uptick in NFT's and decentralization, I've been continuing to further my knowledge on Ethereum and Web3. 
+        The future of our internet looks very exciting!
+      </p>
+      <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+        Aside from being fascinated by the World Wide Web, I enjoy minimalism,
         fashion, tacos, and house music.
       </p>
     </div>
