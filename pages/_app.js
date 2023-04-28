@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo-config";
-import { Analytics } from "@vercel/analytics";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
