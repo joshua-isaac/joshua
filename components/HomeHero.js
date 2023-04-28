@@ -12,7 +12,7 @@ const HomeHero = () => {
           width="500"
           height="500"
           className="rounded-md object-cover"
-          priority={true}
+          priority
         />
       </div>
       <div className="md:ml-8">
@@ -20,7 +20,8 @@ const HomeHero = () => {
           Hello, {"I'm"} Joshua
         </h1>
         <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
-          Software Engineer building (and breaking) websites and web applications on the internet.
+          Software Engineer building (and breaking) websites and web
+          applications on the internet.
         </p>
       </div>
     </section>

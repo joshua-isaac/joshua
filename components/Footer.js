@@ -49,18 +49,18 @@ const Footer = () => {
       <div className="grid grid-cols-3">
         <ul className="space-y-2">
           <li>
-            <Link href="/#work">
-              <a title="Work">work</a>
+            <Link href="/#work" title="work">
+              work
             </Link>
           </li>
           <li>
-            <Link href="/blog">
-              <a title="Blog">blog</a>
+            <Link href="/blog" title="blog">
+              blog
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a title="About">about</a>
+            <Link href="/about" title="about">
+              about
             </Link>
           </li>
         </ul>
@@ -98,13 +98,13 @@ const Footer = () => {
         </ul>
         <ul className="space-y-2">
           <li>
-            <Link href="/mood-board">
-              <a title="Mood Board">mood board</a>
+            <Link href="/mood-board" title="moodboard">
+              mood board
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a title="Home">home</a>
+            <Link href="/" title="home">
+              home
             </Link>
           </li>
         </ul>

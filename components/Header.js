@@ -47,18 +47,18 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-4 text-base items-center">
             <li>
-              <Link href="/#work">
-                <a title="Work">work</a>
+              <Link href="/#work" title="work">
+                work
               </Link>
             </li>
             <li>
-              <Link href="/blog">
-                <a title="Blog">blog</a>
+              <Link href="/blog" title="blog">
+                blog
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <a title="About">about</a>
+              <Link href="/about" title="about">
+                about
               </Link>
             </li>
             <li>
@@ -67,8 +67,8 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <Link href="/">
-                <a title="Home">home</a>
+              <Link href="/" title="home">
+                home
               </Link>
             </li>
           </ul>
