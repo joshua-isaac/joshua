@@ -1,6 +1,5 @@
 import Image from "next/image";
 import heroImage from "../public/assets/headshot-2.jpg";
-import { motion } from "framer-motion";
 
 const HomeHero = () => {
   return (
@@ -20,8 +19,7 @@ const HomeHero = () => {
           Hello, {"I'm"} Joshua
         </h1>
         <p className=" text-gray-500 dark:text-gray-400 leading-relaxed text-md max-w-xl">
-          Software Engineer building (and breaking) websites and web
-          applications on the internet.
+          Web Developer building (and breaking) websites on the internet.
         </p>
       </div>
     </section>

@@ -6,10 +6,10 @@ const About = () => {
   const text = (
     <div className="max-w-2xl">
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        {`Hello! My name is Joshua and I'm a Software Engineer based out of Toronto, Ontario.`}
+        {`Hello! My name is Joshua and I'm a Web Developer based out of Toronto, Ontario.`}
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        {`I'm extremely passionate about building dynamic websites and applications using modern technologies and architecture.`}
+        {`I'm extremely passionate about building websites and applications using modern tools, technologies and architecture.`}
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         I currently work at{" "}
@@ -21,8 +21,18 @@ const About = () => {
           className="text-blue"
         >
           Nightshift
-        </a>,{" "}
-        building immersive frontend websites and decentralized applications (<a href="https://ethereum.org/en/dapps/" target="_blank" rel="noopener noreferrer" className="text-blue" title="Decentralized Applications">dApps</a>).
+        </a>
+        , building immersive frontend websites and decentralized applications (
+        <a
+          href="https://ethereum.org/en/dapps/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue"
+          title="Decentralized Applications"
+        >
+          dApps
+        </a>
+        ).
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
         My technology toolbox includes:
@@ -34,6 +44,8 @@ const About = () => {
           <li>Tailwind CSS</li>
           <li>GreenSock Animation Platform (GSAP)</li>
           <li>Framer Motion</li>
+          <li>Three.js</li>
+          <li>Webflow</li>
         </ul>
       </p>
       <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
