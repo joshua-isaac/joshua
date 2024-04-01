@@ -6,11 +6,11 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        sm: "780px",
-        md: "780px",
-        lg: "780px",
-        xl: "780px",
-        "2xl": "780px",
+        sm: "700px",
+        md: "700px",
+        lg: "700px",
+        xl: "700px",
+        "2xl": "700px",
       },
     },
     fontFamily: {

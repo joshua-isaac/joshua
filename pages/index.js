@@ -1,6 +1,5 @@
 import HomeHero from "../components/HomeHero";
-import WorkListing from "../components/WorkListing";
-import LatestPosts from "../components/LatestPosts";
+
 import { getDatabase } from "../lib/notion";
 import slugify from "slugify";
 
@@ -8,8 +7,6 @@ const Home = ({ projects, posts }) => {
   return (
     <div>
       <HomeHero />
-      <WorkListing projects={projects} />
-      <LatestPosts posts={posts} />
     </div>
   );
 };

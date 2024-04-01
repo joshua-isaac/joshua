@@ -10,17 +10,15 @@ const SpotifyPlayer = ({ data }) => {
         </p>
         <div>
           {data?.songUrl ? (
-            <Marquee gradient={false} pauseOnHover={true}>
-              <p className="ml-2 text-sm">
-                <span>
-                  {data?.title} - {data?.artist}
-                </span>
-              </p>
-            </Marquee>
+            <p className="ml-1 text-sm leading-[100%] relative top-[2px]">
+              <span>
+                {data?.title} - {data?.artist}
+              </span>
+            </p>
           ) : (
             <p className="ml-2 text-sm">
               <span className="text-gray-500 dark:text-gray-400 block mt-1">
-                Offline
+                Media player is currently offline.
               </span>
             </p>
           )}
