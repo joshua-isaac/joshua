@@ -65,7 +65,7 @@ const HomeHero = () => {
         <p>
           {`I also run my own little independent digitial creative agency called `}
           <a
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
             className="text-blue"
             href="https://webdisco.digital"
