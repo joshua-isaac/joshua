@@ -19,7 +19,7 @@ const HomeHero = () => {
         <p>{`My name is Joshua, welcome to my little corner of the internet :)`}</p>
         <p>
           {`I'm a frontend web developer based in Toronto where I specialize in
-          crafting dynamic online web epxeriences.`}
+          crafting dynamic online web experiences.`}
         </p>
         <p>
           {`Currently, I'm part of the engineering team at `}
