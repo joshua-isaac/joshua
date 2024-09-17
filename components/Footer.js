@@ -49,11 +49,11 @@ const Footer = () => {
               contact
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/mood-board" title="moodboard">
               mood board
             </Link>
-          </li>
+          </li> */}
         </ul>
         <ul className="space-y-2">
           <li>
