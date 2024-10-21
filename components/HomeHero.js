@@ -3,23 +3,28 @@ import heroImage from "../public/assets/headshot.jpeg";
 
 const HomeHero = () => {
   return (
-    <section className="container px-4 my-10 md:my-20">
-      <div className="w-40 h-40 mb-10 rounded-md relative">
+    <section className="container px-4 mt-10 md:mt-20">
+      <div className="relative">
         <Image
           src={heroImage}
           alt="joshua isaac"
           width="500"
           height="500"
-          className="rounded-md object-cover"
+          className="object-cover w-40 h-40 rounded-md mb-8"
           priority
         />
       </div>
+      <h2
+        id="about"
+        className="font-medium text-gray-900 text-xl md:text-2xl dark:text-white mb-2"
+      >
+        About
+      </h2>
       <div className="text-gray-500 dark:text-gray-400 leading-relaxed text-md flex flex-col space-y-[16px]">
-        <p>{`Yo!`}</p>
-        <p>{`My name is Joshua, welcome to my little corner of the internet :)`}</p>
+        <p>Welcome to my little corner of the internet.</p>
         <p>
-          {`I'm a frontend web developer based in Toronto where I specialize in
-          crafting dynamic online web experiences.`}
+          My name is Joshua, and I'm a Frontend Web Developer based in Toronto,
+          Ontario.
         </p>
         <p>
           {`Currently, I'm part of the engineering team at `}
@@ -47,23 +52,7 @@ const HomeHero = () => {
           decentralized applications utilizing the blockchain.`}
         </p>
         <p>
-          {`Notably, I've collaborated on projects for industry giants like
-          Mastercard, FaZe Clan, and Wella, among others.`}
-        </p>
-        <p>{`In my toolkit, you'll find the following tech stack:`}</p>
-        <ul className="list-disc ml-4 mt-2 space-y-1 pl-4">
-          <li>Next.js</li>
-          <li>TypeScript</li>
-          <li>Vercel</li>
-          <li>Content Management Systems (CMS)</li>
-          <li>Tailwind CSS</li>
-          <li>GreenSock Animation Platform (GSAP)</li>
-          <li>Framer Motion</li>
-          <li>Three.js</li>
-          <li>Webflow</li>
-        </ul>
-        <p>
-          {`I also run my own little independent digitial creative agency called `}
+          {`I'm also the founder of `}
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -72,12 +61,74 @@ const HomeHero = () => {
           >
             {`Web Disco`}
           </a>
-          {`, working on select projects for brands and businesses.`}
+          {`, my own small independent creative agency.`}
         </p>
+        <p>{`I work on select projects for small to medium sized brands and businesses, helping them establish a strong online presence.`}</p>
+        <h2
+          id="work"
+          className="font-medium text-gray-900 text-xl md:text-2xl dark:text-white mb-2 pt-6"
+        >
+          Work
+        </h2>
         <p>
-          {`Beyond the pixels and code, I'm passionate about minimalism, fashion,
-          techno and tacos, of course.`}
+          {`While working at Otherlife, I've had the opportunity to work on some cool projects.`}
         </p>
+        <ul className="list-disc ml-4 mt-2 space-y-1 pl-4">
+          <li>
+            <a
+              className="text-blue"
+              href="https://otherlife.xyz"
+              title="Otherlife"
+              target="_blank"
+            >
+              Otherlife Creative Agency Website
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-blue"
+              href="https://connect.priceless.com/artistaccelerator-mint"
+              title="Mastercard Artist Accelerator"
+              target="_blank"
+            >
+              Mastercard Artist Accelerator
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-blue"
+              href="https://narcos.otherlife.xyz"
+              title="Narcos e-commerce experience"
+              target="_blank"
+            >
+              Narcos E-Commerce Experience
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-blue"
+              href="https://www.vanta.club/"
+              title="Vanta Club Collective"
+              target="_blank"
+            >
+              Vanta Club Collective
+            </a>
+          </li>
+        </ul>
+        <h2
+          id="skills"
+          className="font-medium text-gray-900 text-xl md:text-2xl dark:text-white mb-2 pt-6"
+        >
+          Skills
+        </h2>
+        <p>{`You can find me working with following tools and technologies:`}</p>
+        <ul className="list-disc ml-4 mt-2 space-y-1 pl-4">
+          <li>React, Next.js, TypeScript</li>
+          <li>Vercel, AWS</li>
+          <li>Content Management Systems (CMS)</li>
+          <li>Tailwind CSS, GSAP, Framer Motion, Three.js</li>
+          <li>Webflow, Shopify</li>
+        </ul>
       </div>
     </section>
   );

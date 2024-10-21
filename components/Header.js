@@ -47,12 +47,18 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-4 text-base items-center">
             <li>
-              <Link
-                target="_blank"
-                href="https://www.webdisco.digital"
-                title="work"
-              >
+              <Link href="/#about" title="about">
+                about
+              </Link>
+            </li>
+            <li>
+              <Link href="/#work" title="work">
                 work
+              </Link>
+            </li>
+            <li>
+              <Link href="/#skills" title="skills">
+                skills
               </Link>
             </li>
             <li>

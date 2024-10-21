@@ -27,7 +27,7 @@ const Footer = () => {
   const { data } = useSWR("/api/spotify", fetcher);
 
   return (
-    <footer className="text-base text-gray-900 dark:text-white container px-4 mb-8">
+    <footer className="text-base text-gray-900 dark:text-white container px-4 mb-8 mt-20">
       <hr className="w-full border-1 border-gray-200 dark:border-gray-500 mb-8" />
       <div className="mb-10">
         <SpotifyPlayer data={data} />
@@ -64,16 +64,26 @@ const Footer = () => {
               instagram
             </a>
           </li>
+          <li>
+            <Link href="/blog" rel="noreferrer noopener" title="Blog">
+              blog
+            </Link>
+          </li>
         </ul>
         <ul className="space-y-2">
           <li>
-            <Link
-              target="_blank"
-              rel="noopener"
-              href="https://www.webdisco.digital"
-              title="work"
-            >
+            <Link href="/#about" title="about">
+              about
+            </Link>
+          </li>
+          <li>
+            <Link href="/#work" title="work">
               work
+            </Link>
+          </li>
+          <li>
+            <Link href="/#skills" title="skills">
+              skills
             </Link>
           </li>
           <li>
