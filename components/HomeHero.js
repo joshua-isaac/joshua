@@ -80,6 +80,7 @@ const HomeHero = () => {
               href="https://otherlife.xyz"
               title="Otherlife"
               target="_blank"
+              rel="noreferrer"
             >
               Otherlife Creative Agency Website
             </a>
@@ -90,6 +91,7 @@ const HomeHero = () => {
               href="https://connect.priceless.com/artistaccelerator-mint"
               title="Mastercard Artist Accelerator"
               target="_blank"
+              rel="noreferrer"
             >
               Mastercard Artist Accelerator
             </a>
@@ -100,6 +102,7 @@ const HomeHero = () => {
               href="https://narcos.otherlife.xyz"
               title="Narcos e-commerce experience"
               target="_blank"
+              rel="noreferrer"
             >
               Narcos E-Commerce Experience
             </a>
@@ -110,6 +113,7 @@ const HomeHero = () => {
               href="https://www.vanta.club/"
               title="Vanta Club Collective"
               target="_blank"
+              rel="noreferrer"
             >
               Vanta Club Collective
             </a>
