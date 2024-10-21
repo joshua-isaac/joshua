@@ -35,28 +35,6 @@ const Footer = () => {
       <div className="flex justify-between">
         <ul className="space-y-2">
           <li>
-            <Link
-              target="_blank"
-              rel="noopener"
-              href="https://www.webdisco.digital"
-              title="work"
-            >
-              work
-            </Link>
-          </li>
-          <li>
-            <Link href="mailto:hello.joshua@hotmail.com" title="contact">
-              contact
-            </Link>
-          </li>
-          {/* <li>
-            <Link href="/mood-board" title="moodboard">
-              mood board
-            </Link>
-          </li> */}
-        </ul>
-        <ul className="space-y-2">
-          <li>
             <a
               href="https://github.com/joshua-isaac"
               target="_blank"
@@ -86,6 +64,28 @@ const Footer = () => {
               instagram
             </a>
           </li>
+        </ul>
+        <ul className="space-y-2">
+          <li>
+            <Link
+              target="_blank"
+              rel="noopener"
+              href="https://www.webdisco.digital"
+              title="work"
+            >
+              work
+            </Link>
+          </li>
+          <li>
+            <Link href="mailto:hello.joshua@hotmail.com" title="contact">
+              contact
+            </Link>
+          </li>
+          {/* <li>
+            <Link href="/mood-board" title="moodboard">
+              mood board
+            </Link>
+          </li> */}
         </ul>
         <ul>
           <li>
