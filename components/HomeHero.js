@@ -23,8 +23,8 @@ const HomeHero = () => {
       <div className="text-gray-500 dark:text-gray-400 leading-relaxed text-md flex flex-col space-y-[16px]">
         <p>Welcome to my little corner of the internet.</p>
         <p>
-          My name is Joshua, and I'm a Frontend Web Developer based in Toronto,
-          Ontario.
+          {`My name is Joshua, and I'm a Frontend Web Developer based in Toronto,
+          Ontario.`}
         </p>
         <p>
           {`Currently, I'm part of the engineering team at `}
