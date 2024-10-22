@@ -21,7 +21,6 @@ const HomeHero = () => {
         About
       </h2>
       <div className="text-gray-500 dark:text-gray-400 leading-relaxed text-md flex flex-col space-y-[16px]">
-        <p>Welcome to my little corner of the internet.</p>
         <p>
           {`My name is Joshua, and I'm a Frontend Web Developer based in Toronto,
           Ontario.`}
@@ -61,7 +60,7 @@ const HomeHero = () => {
           >
             {`Web Disco`}
           </a>
-          {`, my own small independent creative agency.`}
+          {`, my own little independent design & development studio.`}
         </p>
         <p>{`I work on select projects for small to medium sized brands and businesses, helping them establish a strong online presence.`}</p>
         <h2
